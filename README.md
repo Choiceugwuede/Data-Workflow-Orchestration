@@ -1,3 +1,5 @@
+# CoreSentiment Model
+
 # Project Background
 
 CoreSentiment project was initiated by a data consulting organization developing a stock market prediction tool that leverages public sentiment signals
@@ -25,27 +27,27 @@ selected companies - Google, Microsoft, Amazon, Apple, and Facebook.
 - Dynamically parses through Wikipedia pageview dumps.
 - Extracts and transforms relevant company data using Python.
 - Stores processed data in a Database for analytics.
-- Analyzes hourly data to identify the most viewd company per ingestion cycle (a sentiment indicator)
+- Analyzes hourly data to identify the most viewed company per ingestion cycle (a sentiment indicator)
 - Sends automated email notifications of current most viewed company after each successful run.
 
-This workflow forms the foundation for the organization's CoreSentiment model, which can be built upon and made more robust to improve prediction acuracy and operational reliability.
+This workflow forms the foundation for the organization's CoreSentiment model, which can be scaled or extended to improve prediction acuracy and operational reliability.
 
 # Tools 
 - Airflow 3.1.0 (Dockerized)
 - PostgreSQL (Dockerized)
 - Python: for data extraction and transformation
-- BeautifulSoup: for pasring dynamic file lists (from the Wikipedia page dump)
-- Airflow XCom: to pass communications between tasks e.g output of extraction goes to loading etc.
-- Smtp: for email communication
+- BeautifulSoup: Web scraping and dynamic file discovery (from the Wikipedia page dump)
+- Airflow XCom: Task-to-task communications e.g output of extraction goes to loading etc.
+- Smtp(EmailOperator): Email notifications for results and alerts.
 
  # Pipeline Steps:
  1. get_next_file
-    - Dynamically scraped the latest available hourly Wikipedia pageview dump from the site using BeautifulSoup.
+    - Dynamically scrapes the latest available hourly Wikipedia pageview dump from the site using BeautifulSoup.
     - Tracks process using local state file (last_processed.txt) to ensure no file is processed twice.
    
  2. extract_pageviews_hour
-    - Downloads and unzips the .gz file containing details for that hour.
-    - Filters for the selected companies using Python and writes to CSV.
+    - Downloads and unzips the .gz dump file containing details for that hour.
+    - Filters for selected companies using Python and writes to CSV.
     - Pushes the output path via XCom for downstream tasks.
 
   3. load_to_postgres
@@ -60,42 +62,44 @@ This workflow forms the foundation for the organization's CoreSentiment model, w
      - Sends an automated email alert using Airflow's EmailOperator with configured SMTP connection, containing
        - Hourly file processed.
        - Top company viewed at that hour.
-       - Number of views
-       - 
+       - Total Number of views
+       
 # Key Improvement made:
 Initial simple workflow was created to perform the extraction, process and storage - core-sentiment.
 
 Which was then upgraded with more features for more productivity:
-- Added dynamic discovery of hourly files instead of static URLs.
-- Introduced state tracking for simple incremental ingestion.
-- Added top company SQL analysis task.
-- Configured email alerts for completion summary.
+- Data disocvery: Added dynamic discovery of hourly files instead of static URLs.
+- Data Integrity: Introduced state tracking for simple incremental ingestion.
+- Analytics: Added top company SQL analysis task.
+- Result notification: Configured email alerts for completion summary.
 
 # How to RUN:
 1. Clone Repository:
    ``` bash
    git clone https://github.com/Choiceugwuede/Data-Workflow-Orchestration.git
-   cd
+   cd Data-Workflow-Orchestration
    ```
 
-2. Start Docker Containers: Assuming you have docker up and running
+2. Start Docker Containers: Ensure Docker is running, then execute:
    ``` bash
    docker-compose up
    ```
 
-3. Add your email address to get notifications
+3. Configure Notifications
+   Add your email address to get notifications
    
 4. Access Airflow UI to monitor Dags run:
    - Navigate to http://localhost:8080
    - Log in (default: airflow/airflow)
 
 5. Trigger the DAG:
-   Although the dag is scheduled to run daily, but for a manaul test:
+   The DAG is scheduled to run daily, but you can test manually:
    - Locate core-sentiment-V2
-   - Trigger DAG
+   - Click trigger DAG
 
 6. Check your mail.
+   After a successful run, you'll receive an email showing the processed file, top company, and number of views.
 
-Example Output 
+Example Output (Email Notification)
 
 
