@@ -1,0 +1,11 @@
+{"timestamp":"2025-10-24T14:47:00.767010Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-10-24T14:47:00.770502Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/coresentiment_V2.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-24T14:47:01.559490Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-10-24T14:47:01.563334Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-10-24T14:47:01.564893Z","level":"info","event":"Current task name:get_top_company","logger":"task.stdout"}
+{"timestamp":"2025-10-24T14:47:01.565689Z","level":"info","event":"Dag name:core-sentiment-V2","logger":"task.stdout"}
+{"timestamp":"2025-10-24T14:47:01.814372Z","level":"info","event":"Top company: google with 114451 total views.","logger":"task.stdout"}
+{"timestamp":"2025-10-24T14:47:01.885575Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-10-24T14:47:01.934703Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-10-24T14:47:01.943195Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-10-24T14:47:01.953862Z","level":"info","event":"Task operator:<Task(PythonOperator): get_top_company>","logger":"task.stdout"}
