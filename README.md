@@ -86,18 +86,21 @@ Which was then upgraded with more features for more productivity:
    ```
 
 3. Configure Notifications
-   Add your email address to get notifications
+   Add your email address to get notifications, add yours!
+
+   <img width="895" height="72" alt="image" src="https://github.com/user-attachments/assets/bd6cedcb-9893-41c7-be11-78a2fea5f146" />
+
    
-4. Access Airflow UI to monitor Dags run:
+5. Access Airflow UI to monitor Dags run:
    - Navigate to http://localhost:8080
    - Log in (default: airflow/airflow)
 
-5. Trigger the DAG:
+6. Trigger the DAG:
    The DAG is scheduled to run daily, but you can test manually:
    - Locate core-sentiment-V2
    - Click trigger DAG
 
-6. Check your mail.
+7. Check your mail.
    After a successful run, you'll receive an email showing the processed file, top company, and number of views.
 
 Example Output (Email Notification)
