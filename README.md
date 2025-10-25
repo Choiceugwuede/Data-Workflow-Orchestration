@@ -21,7 +21,8 @@ selected companies - Google, Microsoft, Amazon, Apple, and Facebook.
 
 # Architecture
 
-<img width="3164" height="1448" alt="image" src="https://github.com/user-attachments/assets/b2d19f7d-4140-472b-a107-055da66c9875" />
+![Uploading image.png…]()
+
 
 ## Key Features
 - Dynamically parses through Wikipedia pageview dumps.
