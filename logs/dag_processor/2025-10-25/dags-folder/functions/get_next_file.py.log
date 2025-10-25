@@ -59,3 +59,10 @@
 {"timestamp":"2025-10-25T00:35:29.446039Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
 {"timestamp":"2025-10-25T00:36:01.791308Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
 {"timestamp":"2025-10-25T00:36:32.612366Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-25T00:37:04.217698Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-25T00:37:35.836629Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-25T00:38:07.672125Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-25T00:38:46.769745Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-25T00:39:23.068771Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-25T00:40:00.841759Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-25T00:40:32.216465Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/functions/get_next_file.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
