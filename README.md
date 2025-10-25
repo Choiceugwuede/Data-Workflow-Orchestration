@@ -105,4 +105,6 @@ Which was then upgraded with more features for more productivity:
 
 Example Output (Email Notification)
 
+![WhatsApp Image 2025-10-25 at 2 21 31 AM](https://github.com/user-attachments/assets/c8d763ed-5e90-4b1b-b3ec-24fa89c9a1f3)
+
 
