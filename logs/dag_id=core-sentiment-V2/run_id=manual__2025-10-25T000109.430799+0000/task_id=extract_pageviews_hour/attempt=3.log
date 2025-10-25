@@ -1,0 +1,14 @@
+{"timestamp":"2025-10-25T00:49:20.163411Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-10-25T00:49:20.176602Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/coresentiment_V2.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-25T00:49:27.948854Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:49:27.949991Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:49:27.953384Z","level":"info","event":"Current task name:extract_pageviews_hour","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:49:27.996550Z","level":"info","event":"Dag name:core-sentiment-V2","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:49:28.184854Z","level":"info","event":"Downloading https://dumps.wikimedia.org/other/pageviews/2025/2025-10/pageviews-20251001-100000.gz","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:50:05.664199Z","level":"info","event":"Download complete.","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:50:05.665458Z","level":"info","event":"Extracting requested fields","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:51:33.094613Z","level":"info","event":"Extraction is done o. Saved to /opt/airflow/dags/data/pageviews-20251001-100000.csv","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:51:33.270420Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-10-25T00:51:33.540876Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:51:33.550188Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-10-25T00:51:33.571044Z","level":"info","event":"Task operator:<Task(PythonOperator): extract_pageviews_hour>","logger":"task.stdout"}
