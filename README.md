@@ -12,7 +12,7 @@ derived from Wikipedia pageviews.
 To operationalize this idea, the organization required a reliable, automated data pipeline to:
 - Continuously read hourly Wikipedia pageview data for selected technology companies
 - Ingest , process, and store this data
-- Enable analysis for sentiment classiciation.
+- Enable analysis for sentiment classification.
 
 # The solution 
 
