@@ -2,7 +2,9 @@ import pandas as pd
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 def _get_top_company(ti):
-    query = """
+
+    filename = ti.xcom_pull(task_ids="get_next_file", key="next_file")
+    query = f"""
         select case when lower(page_name) like '%amazon%' then 'amazon'
         when lower(page_name) like '%apple%' then 'apple'
         when lower(page_name) like '%facebook%' then 'facebook'
@@ -12,6 +14,7 @@ def _get_top_company(ti):
         end as company,
         sum(cast(views as integer)) as total_views
         from pageviews
+        where file_name = '{filename}'
         group by company
         order by total_views desc
         limit 1;
@@ -25,7 +28,7 @@ def _get_top_company(ti):
 
     if top_company:
         company, total_views = top_company
-        print(f"Top company: {company} with {total_views} total views.")
+        print(f"Top company for {filename}: {company} with {total_views} total views.")
         ti.xcom_push(key="top_company", value=company)
         ti.xcom_push(key="views", value=total_views)
     else:

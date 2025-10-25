@@ -1,0 +1,11 @@
+{"timestamp":"2025-10-24T23:49:24.712884Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-10-24T23:49:24.733993Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/coresentiment_V2.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-10-24T23:49:26.031819Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-10-24T23:49:26.032929Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-10-24T23:49:26.033560Z","level":"info","event":"Current task name:load_to_postgres","logger":"task.stdout"}
+{"timestamp":"2025-10-24T23:49:26.034186Z","level":"info","event":"Dag name:core-sentiment-V2","logger":"task.stdout"}
+{"timestamp":"2025-10-24T23:49:27.384506Z","level":"info","event":"Data from pageviews-20251001-050000 appended to Postgres table 'pageviews'","logger":"task.stdout"}
+{"timestamp":"2025-10-24T23:49:27.386428Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-10-24T23:49:27.488585Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-10-24T23:49:27.489518Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-10-24T23:49:27.490167Z","level":"info","event":"Task operator:<Task(PythonOperator): load_to_***>","logger":"task.stdout"}

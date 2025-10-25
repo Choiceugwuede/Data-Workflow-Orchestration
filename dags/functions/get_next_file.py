@@ -44,6 +44,9 @@ def _get_next_file(ti):
     # save file being proceesed
     with open(state_file, "w") as f:
         f.write(next_file)
-    
+
+    hour = next_file.split("-")[-1]
+
     ti.xcom_push(key="next_file", value=next_file)
+    ti.xcom_push(key="hour", value=hour)
     return next_file

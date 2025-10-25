@@ -28,6 +28,13 @@ def _extract_page_per_hour(ti):
         f.write(response.content)
     print("Download complete.")
 
+    
+
+    # safety check
+    if response.status_code != 200:
+        raise ValueError(f"Downloaded file is not gzip or not found: {url}")
+
+    
     print("Extracting requested fields")
     with gzip.open(gz_path, "rt", encoding="utf-8") as file, open(
         output_csv, "w", newline="", encoding="utf-8"

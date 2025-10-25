@@ -40,9 +40,9 @@ with DAG(
     send_notification = EmailOperator(
         task_id="send_notification",
         to="chidiogougwuede@gmail.com",
-        subject="Top Company for Wikipedia page: {{ti.xcom_pull(task_ids='get_next_file', key='next_file')}}",
+        subject="Sentiment Report for hour: {{ti.xcom_pull(task_ids='get_next_file', key='hour')}}",
         html_content="""
-        <h3>This is the Top Company on this hour </h3>
+        <h3>Hourly Wikipedia Sentiment Report</h3>
         <p>Top Company: <b>{{ti.xcom_pull(task_ids='get_top_company', key='top_company')}}</b></p>
         <p>Number of Views: <b>{{ti.xcom_pull(task_ids='get_top_company', key='views')}}</b></p>
         <p>Kind Regards, </p>
