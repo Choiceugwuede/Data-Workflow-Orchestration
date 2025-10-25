@@ -21,7 +21,8 @@ selected companies - Google, Microsoft, Amazon, Apple, and Facebook.
 
 # Architecture
 
-![Uploading image.png…]()
+<img width="3164" height="1448" alt="image" src="https://github.com/user-attachments/assets/dea4ebaf-6c4a-428e-9e69-e59562910739" />
+
 
 
 ## Key Features
